@@ -10,9 +10,9 @@ class PushNotificationController extends Controller
 {
     public function generateVapidKeys()
     {
-        $keys = VAPID::generateVAPIDKeys();
+        $keys = VAPID::createVAPIDKeys();
 
-        return view('index', [
+        return view('vapid', [
             'vapidPublicKey' => $keys['publicKey'],
             'vapidPrivateKey' => $keys['privateKey'],
         ]);

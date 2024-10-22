@@ -1,17 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VAPID Keys</title>
-</head>
-<body>
-    <h1>VAPID Keys</h1>
-    @if(isset($vapidPublicKey) && isset($vapidPrivateKey))
-        <p><strong>VAPID_PUBLIC_KEY:</strong> {{ $vapidPublicKey }}</p>
-        <p><strong>VAPID_PRIVATE_KEY:</strong> {{ $vapidPrivateKey }}</p>
-    @else
-        <p>No keys generated yet.</p>
-    @endif
-</body>
-</html>
+@extends('templates')
+@section('title', 'Home Page')
+
+@section('content')
+<div class="wrapper">
+    <div id="slider">
+        <div id="slide-wrapper" class="rounded clear">
+            <!-- ################################################################################################ -->
+            <figure id="slide-1">
+                <a class="view" href="#"><img src="{{ asset('academic-education/images/demo/slider/1.png') }}" alt=""></a>
+                <figcaption>
+                    <h2>Mts Al-Huda Reban</h2>
+                    <p>Nama :</p>
+                    <p>Nisn :</p>
+                    <p>Kelas :</p>
+
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</div>
+@endsection
