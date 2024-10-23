@@ -2,6 +2,16 @@
 @section('title', 'Home Page')
 
 @section('content')
+@foreach($schedules as $schedule)
+    <tr>
+        <td>{{ $schedule->hari }}</td>
+        <td>{{ $schedule->start_time }} - {{ $schedule->end_time }}</td>
+        <td>{{ $schedule->jam_ke }}</td>
+        <td>{{ $schedule->kelas }}</td>
+        <td>{{ $schedule->kode_pelajaran }}</td>
+    </tr>
+@endforeach
+
 <div class="wrapper">
     <div id="slider">
         <div id="slide-wrapper" class="rounded clear">

@@ -9,23 +9,20 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
-        Schema::create('schedules', function (Blueprint $table) {
+        Schema::create('classes', function (Blueprint $table) {
             $table->id();
-            $table->string('subject'); // Nama mata pelajaran
-            $table->time('start_time'); // Waktu mulai
-            $table->time('end_time'); // Waktu selesai
-            $table->string('sound_file'); // Nama file suara
+            $table->string('nama'); // Misal 7A, 7B, 8A
             $table->timestamps();
         });
-    }    
+    }
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('schedules');
+        Schema::dropIfExists('classes');
     }
 };
